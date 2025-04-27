@@ -23,6 +23,5 @@ public class Main {
         compras.exibirItems();
         String s = compras.calcularValorTotal();
         System.out.println(s);
-
 }
 }
