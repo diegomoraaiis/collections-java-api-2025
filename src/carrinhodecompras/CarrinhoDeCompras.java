@@ -8,7 +8,7 @@ public class CarrinhoDeCompras {
     List<Item> itens;
 
     public CarrinhoDeCompras() {
-        this.itens = itens = new ArrayList<>();
+        this.itens = new ArrayList<>();
     }
 
     public void adicionarItem(String nome, double preco, int quantidade) {
@@ -25,14 +25,12 @@ public class CarrinhoDeCompras {
         for (Item i : itens){
             float valor = (float) (i.getPreco() * i.getQuantidade());
             valorTotal = valorTotal + valor;
-
         }
         return String.format("Valor Total...: R$:%.2f", valorTotal);
     }
 
     public void removerItem(String nome){
         List<Item> removerItem = new ArrayList<>();
-
         for(Item i : itens){
             if (i.getNome().equalsIgnoreCase(nome)){
                 removerItem.add(i);
@@ -40,5 +38,4 @@ public class CarrinhoDeCompras {
         }
         itens.removeAll(removerItem);
     }
-
 }
